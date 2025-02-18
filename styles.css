@@ -1,0 +1,192 @@
+/* General reset for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #a8e063, #56ab2f); /* Plant-themed gradient background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: -110px; /* Reduce margin to move the container closer to the top */
+    position: relative; /* Ensure it doesn't stay fixed */
+    top: 0; /* Adjust this value if needed */
+}
+
+
+header h1 {
+    font-size: 36px;
+    color: #4caf50; /* Plant green */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* File upload button and styling */
+.upload-section {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-button {
+    background-color: #8bc34a; /* Plant green */
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Add margin between buttons */
+}
+
+.upload-button:hover {
+    background-color: #4caf50; /* Darker green */
+}
+
+/* Result section styling */
+#result-section {
+    margin-top: 20px;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50; /* Green for nature */
+    animation: fadeIn 1s ease-out;
+}
+
+/* Flower theme animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Flower Info Card */
+.flower-info-card {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.flower-info-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.flower-info-card div {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Smooth blur effect for transparency */
+}
+
+.nav-item {
+    text-align: center;
+    color: #8bc34a;
+    cursor: pointer;
+}
+
+.nav-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #4caf50;
+}
+
+.nav-item:hover i {
+    color: #4caf50;
+}
+
+.nav-item p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Font Awesome Icons Styling */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* Responsiveness for mobile */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .upload-button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    #result {
+        font-size: 20px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+    }
+
+    .flower-info-card img {
+        max-width: 100%;
+    }
+}

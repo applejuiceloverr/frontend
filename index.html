@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Classification</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="scripts.js" defer></script>
+    <script>
+        // Set the API URL as a global variable
+        window.apiUrl = 'http://localhost:8000'; // Change this URL based on your environment
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Flower Classification</h1>
+            <p>Upload an image of a flower, and we'll predict its type!</p>
+        </header>
+
+        <section class="upload-section">
+            <label for="imageInput" class="upload-button">Choose File</label>
+            <input type="file" id="imageInput" accept="image/*">
+            <label for="cameraInput" class="upload-button">Take Picture</label>
+            <input type="file" id="cameraInput" accept="image/*" capture="camera">
+            <img id="preview-image" src="" alt="Image Preview" style="display: none; margin-top: 10px; max-width: 100%; height: auto;">
+            <button id="uploadButton" class="upload-button">Upload and Predict</button>
+            <div id="loading-indicator" style="display: none;">Loading...</div>
+        </section>
+
+        <section id="result-section">
+            <p id="result"></p>
+        </section>
+
+        <!-- Flower Information Card -->
+        <div id="flower-info-card" class="flower-info-card">
+            <img id="flower-image" src="" alt="Flower Image">
+            <div id="flower-description"></div>
+        </div>
+    </div>
+
+    <!-- Bottom Navbar with Icons -->
+    <div class="bottom-navbar">
+        <div class="nav-item">
+            <i class="fas fa-home"></i>
+            <p>Home</p>
+        </div>
+        <div class="nav-item" onclick="window.location.href='about.html'">
+            <i class="fas fa-info-circle"></i>
+            <p>About</p>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-envelope"></i>
+            <p>Contact</p>
+        </div>
+    </div>
+</body>
+</html>
